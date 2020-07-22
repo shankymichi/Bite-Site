@@ -30,7 +30,7 @@
 <% campgrounds.forEach(function(campground){ %>
 <div class="responsive">
     <div class="gallery">
-        <a target="_blank" href="/posts/<%= campground._id %>">
+        <a href="/posts/<%= campground._id %>">
             <img src="<%= campground.image %>" alt="<%= campground.name  %> " width="600" height="400">
         </a>
 
