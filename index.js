@@ -6,20 +6,22 @@ var app = express();
 var request = require("request");
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
+const MongoClient = require('mongodb').MongoClient;
 var methodoverride = require("method-override");
 var campg = require("./models/campground");
-
 var comment = require("./models/comments");
 var user = require("./models/users");
 var passport = require("passport");
 var localstrategy = require("passport-local");
 var flash = require("connect-flash");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodoverride("_method"));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(flash());
-mongoose.connect("mongodb://localhost/yelp_camp");
+
+mongoose.connect(process.env.DB_URI || "mongodb://localhost/yelp_camp");
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/views/partials'));
 app.use(express.static(__dirname + '/partials'));
