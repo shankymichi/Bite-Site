@@ -1,4 +1,4 @@
-# Bite-Site
+# Bite-Site : https://bite-site.herokuapp.com/
 Bite Site is a food blogging website where foodie from different parts of the world share their experiences of good food with good people.
 --
 To run : node index.js
