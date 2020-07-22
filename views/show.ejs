@@ -1,0 +1,132 @@
+
+
+<% include ./partials/headers %>
+<style>
+  .ui  left demo vertical   menu{
+    font-size: 1vw; font-style: unset; font-family:  Arial, sans-serif;
+
+
+  }
+  .ui huge header{
+    text-align: center; text-transform: uppercase; font-size: 3vw
+
+  }
+  .description{
+    text-align: justify;
+     font-size: 1.4vw;
+      font-family: serif;
+      font-weight: 2px;
+  }
+  .contain{
+    background-color: lightgrey; padding:1em
+  }
+  .ui mini green basic button{float:left; font-size: 0.9vw}
+
+  .ui mini red button{
+    float:left; font-size: 0.9vw
+  }
+ .comment btn {
+    float:right; font-size: 0.5vw
+  }
+</style>
+<br><br>
+<div  class="ui container">
+<div style="border:none;  padding: none; box-shadow: none;"    class="ui celled grid">
+  <div  style="border:none; padding: none; box-shadow: none;" class="row">
+    <div   class="five wide column">
+  <br><br>
+	<div style="font-size: 1.5vw; font-style: normal; font-family:  Arial, sans-serif;" class="ui  left demo vertical   menu">
+
+  <div class="item ">
+    <i class="users icon"></i>
+    <%=campground.name %>
+    </div>
+ <div class="item ">
+   <i class="marker icon"></i>
+     Delhi, India
+    </div>
+  <div class="item ">
+   <i class="mail icon"></i>
+    <a href="https://shashankbhardwaj.420@gmail.com">Gmail</a>
+  </div>
+
+
+ </div>
+ </div>
+
+
+
+   <div class="ten wide column">
+
+<div class="uisegment">
+   <div style="font-size: 3vw; text-align: center;" class ="ui huge header"> <%=campground.name %></div>
+<br>
+<div class = "ui top attached ">
+<div class ="item">
+<img class="ui centered rounded image"  src = "<%=campground.image %>">
+<br>
+<br>
+
+<div class="content">
+
+</div>
+<div  class="contains">
+<%-campground.description %>
+<br>
+<br>
+<p><em>Submitted By :
+<strong><%=campground.author.username %></strong> </em>
+</p>
+</div>
+
+
+
+
+
+<div   class="contain">
+
+<a  style="font-size : 0.9vw;" class="ui blue  button" href="/posts/<%= campground._id%>/comments/new">ADD COMMENT</a>
+
+<% campground.comments.forEach(function(comment){ %>
+<br><br>
+<strong><%=comment.author.username %></strong> -- <%= comment.text %>
+
+<%    if(currentuser  && comment.author.id.equals(currentuser._id))     { %>
+
+<a style="float:right ;  font-size: 0.5vw;"  class =" ui mini green basic button" class="comment_btn"  href="/posts/<%=campground._id %>/comments/<%=comment._id%>/edit">EDIT</a>
+<form style="display:inline;" action ="/posts/<%=campground._id %>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+
+<button style="float:right ; font-size: 0.5vw;" class="ui mini red basic button" class="comment_btn" >DELETE</button>
+<br></br>
+</form>
+<% } %>
+
+<%})%>
+</br>
+
+<br><br>
+<%    if(currentuser && campground.author.id.equals(currentuser._id)  )  { %>
+
+<a style=" font-size: 0.9vw;"  class =" ui light green  button " class="post_btn" href="/posts/<%=campground._id %>/edit">Edit Post</a>
+<form style="display: inline;" action ="/posts/<%=campground._id %>?_method=DELETE" method="POST">
+
+<button style="float: left; font-size: 0.9vw;"   class="ui red button" class="post_btn" >Delete Post</button>
+
+</form>
+<% } %>
+<br></br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+			<br><br><br><br>
+    <% include ./partials/footer %></div>
+
+
+</body>
+</html>

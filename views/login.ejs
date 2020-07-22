@@ -1,0 +1,40 @@
+
+<% include ./partials/headers %>
+<br>
+<br>
+<br>
+<br>
+<div class="ui main text container segment">
+<div class="ui middle aligned center aligned grid">
+<div class= "column">
+<h2 class="ui teal image header">
+<img src="" class="image">
+<div class="content">
+ LOG IN to your account
+</div>
+</h2>
+<form class="ui mini form" action="/login" method="post">
+<div class="ui stacked segment">
+
+<div class="field">
+<div class="ui left icon input"><i class="home icon"></i><i class="user icon"></i>
+<input type ="text" name="username" placeholder="Username">
+</div>
+</div>
+<div class="field">
+<div class="ui left icon input"><i class=" lock icon"></i>
+<input type ="password" name="password" placeholder="Password">
+</div>
+</div>
+<button>
+<div class="ui fluid large teal submit button">LogIn</div></button> 
+<div class="ui message">
+      NOT a user? <a href="/register">Sign UP </a>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

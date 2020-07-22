@@ -1,0 +1,26 @@
+
+
+
+
+
+          <% include ./partials/headers %>
+
+<div class="ui main text container segment">
+   <div class ="ui huge header"> Add New Comment :<strong><%=campground.name %></strong></div>
+
+
+
+<form class ="ui form" action ="/posts/<%=campground._id %>/comments" method="POST">
+
+
+<label>DESCRIPTION</label>
+<textarea name ="groundcomment[text]" placeholder ="text"></textarea><br><br>
+
+<input  class="ui button" type="submit">
+<a class="ui basic green button" href="/posts/<%=campground._id %>">back</a>
+</form>
+</div>
+
+
+		  </body>
+</html>

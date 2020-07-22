@@ -1,0 +1,38 @@
+
+
+<% include ./partials/headers %>
+
+<div class="ui main text container segment">
+   <div class ="ui huge header">
+ EDIT PROJECT: <%=   fcamp.name%></div>
+
+
+<form class ="ui form" action ="/posts/<%=fcamp._id %>?_method=PUT" method="POST">
+<!-- value in input referrs to the prefilled content -->
+
+
+
+<div class = "field">
+<label>TITLE</label>
+<input type ="text" name ="groundp[name]" value ="<%=fcamp.name%>"><br><br><br>
+</div>
+
+
+
+<div class = "field">
+<label>IMAGE</label>
+<input type ="text" name ="groundp[image]" value ="<%=fcamp.image%>"><br><br><br>
+<br>
+</div>
+
+
+<div  style=" text-align: justify;  font-size: 2em; font-family:  serif; font-size: 14px;" class = "description">
+<label>DESCRIPTION</label>
+<textarea name ="groundp[description]" >  <%=fcamp.description%>  </textarea><br><br>
+</div>
+<input class="ui button" type="submit">
+</form>
+</div>
+
+</body>
+</html>

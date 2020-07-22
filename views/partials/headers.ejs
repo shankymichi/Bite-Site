@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Bite Site</title>
+
+    <link  rel ="stylesheet" type="text/css"  href ="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></script>
+
+
+
+
+    <style>
+        .ui.labeled.icon.menu .item {
+            min-width: 2em;}
+
+        div.gallery {
+            border: 1px solid white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        div.gallery:hover {
+            border: 1px solid green;
+            visibility: 0.1;
+
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: 350px;
+            padding: 4px;
+            border-radius: 8px;
+        }
+        div.gallery img:hover {
+            opacity: 0.5;
+        }
+
+        div.desc {
+            padding: 18px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 43.99999%;
+            margin: 2vw 2vw;
+
+
+        }
+        .pusher{
+            background-color: lightgrey;
+        }
+        .pusher a{
+            font-size: 2vw!important;
+        }
+        @media only screen and (max-width: 1400px){
+            /*   show page post */
+            div.uisegment div{
+                font-size:15px;
+
+            }
+            .ui.mini.green.basic.button{
+                font-size:10px!important;
+            }
+            .ui.mini.red.basic.button{
+                font-size:10px!important;
+            }
+            .ui.green.button{
+                font-size:12px!important;
+            }
+            .ui.red.button{
+                font-size:12px!important;
+            }
+            .ui.blue.button{
+                font-size:13px!important;
+            }
+
+            div.uisegment {
+                font-size:1.5vw!important;
+
+            }
+
+            div.ui.huge.header{
+                font-size: 30px!important;
+            }
+
+            /*       ---------------------------------   */
+
+        }
+
+        @media only screen and (max-width: 1000px){
+            /*   show page post */
+            div.uisegment div{
+                font-size:15px;
+
+            }
+            .ui.mini.green.basic.button{
+                font-size:11px!important;
+            }
+            .ui.mini.red.basic.button{
+                font-size:11px!important;
+            }
+            .ui.green.button{
+                font-size:12px!important;
+            }
+            .ui.red.button{
+                font-size:12px!important;
+            }
+            .ui.blue.button{
+                font-size:14px!important;
+            }
+
+            div.uisegment {
+                font-size:1.5vw!important;
+
+            }
+
+            div.ui.huge.header{
+                font-size: 30px!important;
+            }
+
+        /*       ---------------------------------   */
+
+        }
+
+        @media only screen and (max-width: 800px) {
+            .responsive {
+                width: 45.99999%;
+
+                margin: 2vw 1.5vw;
+            }
+            div.gallery img{
+                height: 240px;
+            }
+            .ui{
+                font-size: 10px;
+            }
+            .ui.labeled.icon.menu .item {
+                width: 3em;
+            }
+            .ui.vertical.menu .item{
+            font-size:15px;
+            }
+            .ui.vertical.menu i{
+                font-size:2em;
+                float: center;
+            }
+            .ui.labeled.icon.menu .item {
+                width: 3em;
+            }
+            .ui.vertical.menu .item{
+                font-size:15px;
+            }
+            .ui.vertical.menu i{
+                font-size:2em;
+                float: center;
+            }
+
+            /*   show page post */
+            div.uisegment div{
+                font-size:15px;
+
+            }
+            .ui.mini.green.basic.button{
+                font-size:10px!important;
+            }
+            .ui.mini.red.basic.button{
+                font-size:10px!important;
+            }
+            .ui.green.button{
+                font-size:12px!important;
+            }
+            .ui.red.button{
+                font-size:12px!important;
+            }
+            .ui.blue.button{
+                font-size:13px!important;
+            }
+
+            div.uisegment {
+                font-size:1.5vw!important;
+
+            }
+
+            div.ui.huge.header{
+                font-size: 30px!important;
+            }
+
+
+
+            /*       ---------------------------------   */
+
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                .contain{
+                    width:100%
+                }
+                .responsive {
+                    width: 100%;
+                    margin: 5vw 0;
+                }
+
+                .ui.labeled.icon.menu .item {
+                    width: 3em;
+                }
+                .ui.vertical.menu .item{
+                    font-size:15px;
+                }
+                .ui.vertical.menu i{
+                    font-size:2em;
+                    float: center;
+                }
+
+
+                /*   show page post */
+                div.uisegment div{
+                    font-size:15px;
+
+                }
+                .ui.mini.green.basic.button{
+                    font-size:10px!important;
+                }
+                .ui.mini.red.basic.button{
+                    font-size:10px!important;
+                }
+                .ui.green.button{
+                    font-size:12px!important;
+                }
+                .ui.red.button{
+                    font-size:12px!important;
+                }
+                .ui.blue.button{
+                    font-size:14px!important;
+                }
+
+                div.uisegment {
+                    font-size:1.5vw!important;
+
+                }
+
+                div.ui.huge.header{
+                    font-size: 30px!important;
+                }
+
+
+
+        /*       ---------------------------------   */
+            }
+
+        @media only screen and (max-width: 400px) {
+
+
+
+            /*   show page post */
+            div.uisegment div{
+                font-size:15px;
+
+            }
+            .ui.mini.green.basic.button{
+                font-size:8px!important;
+            }
+            .ui.mini.red.basic.button{
+                font-size:8px!important;
+            }
+            .ui.green.button{
+                font-size:10px!important;
+            }
+            .ui.red.button{
+                font-size:10px!important;
+            }
+            .ui.blue.button{
+                font-size:12px!important;
+            }
+
+            div.uisegment {
+                font-size:2.5vw!important;
+
+            }
+
+            div.ui.huge.header{
+                font-size: 30px!important;
+            }
+
+
+
+            /*       ---------------------------------   */
+        }
+
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 4px 2px 2px 0px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+
+            }
+            .button a{
+                color: white;
+            }
+            #head{padding-top: 20px;
+                font-size: 60px;
+                OPACITY: 0.7;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .ui.vertical.menu{ width: 20vw; }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+
+<div class="ui container">
+
+    <div class ="ui grid">
+
+
+        <div class="computer only row">
+            <div class="column">
+                <div class ="ui  inverted borderless menu" >
+                    <a  href="/posts" class=" active item">
+                        <i class="home icon"></i></a>
+                    <div class="right menu">
+                        <% if(!currentuser) { %>
+                            <a href="/register" class="item">SignUp</a>
+                            <a  href="/login" class="item">LogIn</a>
+
+                        <% } else {%>
+                        <div class="item">
+                            <div class="text">  <i class="user icon"></i> <%=currentuser.username%>
+                            </div></div>
+                        <a  href="/logout" class="item">LogOut</a>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablet mobile only row">
+            <div class="column">
+                <div class="ui inverted menu">
+                    <a  href="/posts" class=" active item">
+                        <i class="home icon"></i></a>
+                    <div class="right menu">
+                        <div class="ui inverted compact menu">
+                            <div class="ui simple dropdown item">
+                                <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+
+                                <div class="ui inverted menu">
+                                    <div  class="item">Contacts</div>
+                                    <% if(!currentuser) { %>
+                                        <a href="/register" class="item">SignUp</a>
+                                        <a  href="/login" class="item">LogIn</a>
+
+                                    <% } else {%>
+                                    <div class="item">
+                                        <div class="text">  <i class=" user icon"></i> <%=currentuser.username%>
+                                        </div></div>
+                                    <a  href="/logout" class="item">LogOut</a>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<% if(error && error.length>0){  %>
+
+<div class="ui negative message">
+    <h1><%=error%></h1>
+</div>
+<%}%>
+<% if(success && success.length>0){  %>
+
+<div class="ui positive message">
+    <h1><%=success%></h1>
+</div>
+<%}%>
+

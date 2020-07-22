@@ -1,0 +1,31 @@
+
+
+
+
+
+          <% include ./partials/headers %>
+
+<div class="ui main text container segment">
+   <div class ="ui huge header"> New Bite Site</div>
+
+
+
+<form class ="ui form" action ="/posts" method="POST">
+<div class = "field">
+<label>TITLE</label>
+<input type ="text" name ="groundp[name]" placeholder ="name"><br><br><br>
+</div>
+<label>IMAGE</label>
+<input type ="text" name ="groundp[image]" placeholder ="image"><br><br><br>
+<br>
+<label>DESCRIPTION</label>
+<textarea name ="groundp[description]" placeholder ="desription"></textarea><br><br>
+
+<input  class="ui button" type="submit">
+<a class="ui basic green button" href="\posts">back</a>
+</form>
+</div>
+
+
+		  </body>
+</html>
